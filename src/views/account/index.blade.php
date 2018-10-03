@@ -12,6 +12,7 @@
 
 @section('aimeos_head')
     <?= $aibody['basket/mini'] ?>
+    </div> {{-- duct tape --}}
 @stop
 
 @section('aimeos_body')

@@ -52,6 +52,12 @@ class Locale
 	 */
 	public function get( \Aimeos\MShop\Context\Item\Iface $context )
 	{
+		$nc = 'EUR';	// currency always EUR
+		$nl = explode('|',\Request::session()->get('aimeos/basket/locale'));
+		if(count($nl)!=3)
+			$nl = 'pt';
+		else
+			$nl = $nl[1];
 		if( $this->locale === null )
 		{
 			$site = Input::get( 'site', 'default' );
@@ -68,7 +74,7 @@ class Locale
 			$disableSites = $this->config->get( 'shop.disableSites', true );
 
 			$localeManager = \Aimeos\MShop\Locale\Manager\Factory::createManager( $context );
-			$this->locale = $localeManager->bootstrap( $site, $lang, $currency, $disableSites );
+			$this->locale = $localeManager->bootstrap( $site, $nl /*$lang*/, $nc /*$currency*/, $disableSites );
 		}
 
 		return $this->locale;

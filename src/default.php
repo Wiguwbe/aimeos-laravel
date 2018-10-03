@@ -2,6 +2,14 @@
 
 return array(
 
+	'i18n' => array(
+		'pt' => array(
+			'client' => array(
+				'Latest' => array('Ultimas'),
+			),
+		),
+	),
+
 	'apc_enabled' => false,
 	'apc_prefix' => 'laravel:',
 	'extdir' => base_path('ext'),
@@ -13,8 +21,8 @@ return array(
 		'account-index' => array( 'account/profile','account/subscription','account/history','account/favorite','account/watch','basket/mini','catalog/session' ),
 		'basket-index' => array( 'basket/standard','basket/related' ),
 		'catalog-count' => array( 'catalog/count' ),
-		'catalog-detail' => array( 'basket/mini','catalog/stage','catalog/detail','catalog/session' ),
-		'catalog-list' => array( 'basket/mini','catalog/filter','catalog/stage','catalog/lists' ),
+		'catalog-detail' => array( 'basket/mini','catalog/filter'/*,'catalog/stage'*/,'catalog/detail','catalog/session' ),
+		'catalog-list' => array( 'basket/mini','catalog/filter'/*,'catalog/stage'*/,'catalog/lists' ),
 		'catalog-stock' => array( 'catalog/stock' ),
 		'catalog-suggest' => array( 'catalog/suggest' ),
 		'checkout-confirm' => array( 'checkout/confirm' ),
@@ -229,6 +237,9 @@ return array(
 					),
 					'language' => array(
 						'param-name' => 'locale',
+					),
+					'name' => array(
+						'name' => 'default',
 					),
 				),
 			),

@@ -15,6 +15,10 @@
         {
             "type": "git",
             "url": "https://github.com/aimeos/php-coveralls"
+        },
+        {
+        	"type": "git",
+        	"url": "https://github.com/Wiguwbe/ai-client-html"
         }
     ],
     "prefer-stable": true,

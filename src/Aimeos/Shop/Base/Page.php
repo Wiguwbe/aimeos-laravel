@@ -74,7 +74,17 @@ class Page
 	public function getSections( $pageName )
 	{
 		$context = $this->context->get();
-		$langid = $context->getLocale()->getLanguageId();
+
+		//$langid = $context->getLocale()->getLanguageId();
+
+		/* custom locale */
+		$langid = explode('|',\Request::session()->get('aimeos/basket/locale'));
+		if(count($langid)!=3)
+			$langid = 'pt';	// portuguese by default
+		else
+			$langid = $langid[1];
+		\App::setLocale($langid);
+
 		$tmplPaths = $this->aimeos->get()->getCustomPaths( 'client/html/templates' );
 		$view = $this->view->create( $context, $tmplPaths, $langid );
 		$context->setView( $view );

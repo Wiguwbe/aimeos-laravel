@@ -1,9 +1,23 @@
 @extends('shop::base')
 
+@section('aimeos_styles')
+<style>
+	.second_header {
+		background-color: #414244;
+	}
+	
+	.catalog-list {
+		margin-bottom: 30px;
+	}
+</style>
+
+<!-- <?= \Request::session()->get('aimeos/basket/locale'); ?> -->
+@stop
+
 @section('aimeos_header')
     <?= $aiheader['basket/mini'] ?>
     <?= $aiheader['catalog/filter'] ?>
-    <?= $aiheader['catalog/stage'] ?>
+    <?php // $aiheader['catalog/stage'] ?>
     <?= $aiheader['catalog/lists'] ?>
 @stop
 
@@ -16,7 +30,7 @@
 @stop
 
 @section('aimeos_stage')
-    <?= $aibody['catalog/stage'] ?>
+    <?php // $aibody['catalog/stage'] ?>
 @stop
 
 @section('aimeos_body')

@@ -5,5 +5,7 @@
 @stop
 
 @section('aimeos_body')
+	<div style="padding: 2%">
     <?= $aibody['checkout/standard'] ?>
+    </div>
 @stop

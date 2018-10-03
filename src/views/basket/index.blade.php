@@ -6,6 +6,8 @@
 @stop
 
 @section('aimeos_body')
+	<div style="padding: 2%">
     <?= $aibody['basket/standard'] ?>
     <?= $aibody['basket/related'] ?>
+   	</div>
 @stop
